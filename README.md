@@ -17,7 +17,8 @@ Concise Description of why this app exists
 ### Links and Resources
 
 - [Project Deck](https://docs.google.com/presentation/d/1sjMvWgOLFNzgRsVHPoguDWuKrk0tR04XeYjH9Z0Gr2k/edit#slide=id.g2accd1c413_3_31)
-- [Trello]()
+- [Trello](https://trello.com/w/cf401team)
+-
 
 - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
