@@ -1,0 +1,20 @@
+{
+  "name": "mk-naomi",
+  "version": "1.0.0",
+  "description": "### Project: Project Name Here",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-Midterm/MK-Naomi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Team-Midterm/MK-Naomi/issues"
+  },
+  "homepage": "https://github.com/Team-Midterm/MK-Naomi#readme"
+}
