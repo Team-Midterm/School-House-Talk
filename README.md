@@ -16,7 +16,8 @@ School House Talk will act as a single source of truth for communication and inf
 
 - [Project Deck](https://docs.google.com/presentation/d/1sjMvWgOLFNzgRsVHPoguDWuKrk0tR04XeYjH9Z0Gr2k/edit#slide=id.g2accd1c413_3_31)
 - [Trello](https://trello.com/w/cf401team)
--
+- [UML](needed)
+- [Software Requirements](/requirements.md)
 
 - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
@@ -37,10 +38,10 @@ i.e.
 
 ### How to use your library (where applicable)
 
-
 ### Features
 
 #### MVP
+
 |  Feature  |  Completion Level  |  Time Expected  |  Time Taken  |  Developer  |
 | :---------------------- | :-----------: | :-------: | :-------: | :-------------|
 |
@@ -51,10 +52,4 @@ i.e.
 - Any tests of note?
 - Describe any tests that you did not complete, skipped, etc
 
-### UML
-
-Link to an image of the UML for your application and response to events
-
 ### References
-
-
