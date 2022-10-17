@@ -4,9 +4,14 @@
 
 What is the vision of this product?
 
+To ease communication concerns as it relates school events.
+
 What pain point does this project solve?
 
+It creates a single source of truth by school staff to relay important information to parents and students.
+
 Why should we care about your product?
+
 
 ## Scope
 
