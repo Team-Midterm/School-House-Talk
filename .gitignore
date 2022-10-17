@@ -4,6 +4,7 @@ db
 temp
 build
 memory
+.vscode
 
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
 ### Linux ###
