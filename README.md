@@ -10,7 +10,7 @@
 
 ### Problem Domain
 
-School House Talk will act as a single source of truth for communication and information about school activities and events as well as a messaging app between faculty and parents.
+School House Talk will act as a single source of truth for communication and information about school activities and events as well as a messaging app between faculty and parents
 
 ### Links and Resources
 
@@ -53,4 +53,3 @@ i.e.
 - Describe any tests that you did not complete, skipped, etc
 
 ### References
-
