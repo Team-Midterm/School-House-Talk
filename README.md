@@ -1,8 +1,10 @@
-## Mid Term Project
+# School-House-Talk
 
-### Project: Project Name Here
+## Problem Domain:
 
-### Author:
+Create a chat application that allows for different rooms of communication in a school enviroment to better enable communication. Example sports channel, band, teachers, all students, parents.
+
+### Authors:
 
 - Isaiah Keller
 - Luis Rosales
@@ -18,8 +20,9 @@ Concise Description of why this app exists
 
 - [Project Deck](https://docs.google.com/presentation/d/1sjMvWgOLFNzgRsVHPoguDWuKrk0tR04XeYjH9Z0Gr2k/edit#slide=id.g2accd1c413_3_31)
 - [Trello](https://trello.com/w/cf401team)
--
-
+- [UML](needed)
+- [wireframe](needed)
+- [softwareRequirements.md](needed)
 - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable)
