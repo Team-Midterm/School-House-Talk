@@ -46,6 +46,10 @@ i.e.
 | :---------------------- | :-----------: | :-------: | :-------: | :-------------|
 |
 
+### UML
+
+![MVP UML](./assets/Midterm%20MVP%20UML.png)
+
 ### Tests
 
 - How do you run tests?
