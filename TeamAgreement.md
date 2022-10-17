@@ -36,25 +36,33 @@
 ### Conflict Plan
 
 - What will be your group’s process to resolve conflict, when it arises?
-    - group consensus, air concerns early; don't let it build up, if necessary see instructional staff
+    - group consensus,
+    - air concerns early; don't let it build up,
+    - if necessary see instructional staff
 - What will your team do if one person is taking over the project and not letting the other members contribute?
-    - I don't see this being a problem
+    - I don't see this being a problem,
+    - group consensus,
+    - air concerns early; don't let it build up,
+    - if necessary see instructional staff
 - How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?
-    - patience, air concerns early; don't let it build up,
+    - patience,
+    - air concerns early; don't let it build up,
 - How will you raise concerns to members who are not adequately contributing?
-    - patience, air concerns early; don't let it build up,
+    - patience,
+    - air concerns early; don't let it build up,
 - How and when will you escalate the conflict if your resolution attempts are unsuccessful?
-    - if they are addressed but that doesn't resolve the problem we will take it to the instructional staff
+    - if problems are addressed but that doesn't resolve the problem we will take it to the instructional staff
 
 ### Communication Plan
 
-
 - What hours will you be available to communicate?
-    - Normal daytimes, and communicate through slack
+    - Normal class times M-F 9am to 6pm PST
+    - communicate through slack
 - What platforms will you use to communicate (ie. Slack, phone …)?
     - slack
 - How often will you take breaks?
-    - follow class schedule, goal will be hourly but we will adjust as necessary according to needs
+    - follow class schedule,
+    - goal will be hourly but we will adjust as necessary according to needs
 - What is your plan if you start to fall behind?
     - bring it to the group, ask for help
 - How will you communicate after hours and on the weekend?
