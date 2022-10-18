@@ -5,7 +5,7 @@ module.exports = function (err, req, res, next) {
 
   const errObject = {
     status: 500,
-    message: error,
+    message: `SERVER ERROR: ${error}`,
   };
 
   res.status(500).json(errObject);
