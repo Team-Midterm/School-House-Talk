@@ -1,12 +1,11 @@
-const {sequelize} = require ('../src/models/index');
-const {student, sport} = require('../src/models');
-const Chance = require('chance');
+const {sequelize, student} = require ('../src/models/index');
+// const {student} = require('../src/models');
+// const Chance = require('chance');
 
-let chance = new Chance();
+// let chance = new Chance();
 
 async function seedDatabase() {
   sequelize.sync();
-
 
   await student.create({
     studentID: '001',
