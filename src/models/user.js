@@ -50,8 +50,8 @@ const userModel = (sequelize, DataTypes) => {
 
   model.authenticateToken = async function (token) {
     try {
-      const paresedToken = jwt.verify(token, SECRET);
-      const user = this.findOne({ where: {username: paresedToken.username} });
+      const parsedToken = jwt.verify(token, SECRET);
+      const user = this.findOne({ where: {username: parsedToken.username} });
       if (user) { return user; }
       throw new Error('User not found');
     } catch (error) {
