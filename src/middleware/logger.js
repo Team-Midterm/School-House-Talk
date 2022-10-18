@@ -1,6 +1,6 @@
 'use strict';
 
-const logger = (res, req, next) => {
+const logger = (req, res, next) => {
   console.log(req.method, req.path);
   next();
 };
