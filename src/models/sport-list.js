@@ -1,14 +1,14 @@
 'use strict';
 
-module.exports = (sequelizeDB, DataTypes) => {
-  return sequelizeDB.define('sport', {
+module.exports = (sequelize, DataTypes) => {
+  return sequelize.define('sport', {
     sport: {
       type: DataTypes.ENUM,
       values: ['Football', 'Baseball', 'Basketball', 'Soccer'],
       allowNull: false,
     },
     date: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     time: {
