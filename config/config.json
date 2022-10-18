@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "tim",
+    "password": null,
+    "database": "sht-db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "tim",
+    "password": null,
+    "database": "sht-db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "tim",
+    "password": null,
+    "database": "sht-db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
