@@ -2,7 +2,6 @@
 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { sequelize } = require('.');
 
 const SECRET = process.env.SECRET || 'secret';
 
