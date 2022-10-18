@@ -5,6 +5,8 @@ const {Sequelize, DataTypes} = require ('sequelize');
 const studentSchema = require('./student-schema');
 const sportSchema = require('./sport-list');
 const ModelInterface = require('./model-interface');
+const usersModel = require('./user');
+
 
 const DATABASE_CONFIG = process.env.NODE_ENV === 'production' ? {
   dialectOptions: {
@@ -28,4 +30,5 @@ module.exports = {
   sequelize,
   student: new ModelInterface(studentMod),
   sport: new ModelInterface(sportMod),
+  user: usersModel(sequelize, DataTypes),
 };
