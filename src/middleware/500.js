@@ -8,6 +8,6 @@ module.exports = function (err, req, res, next) {
     message: error,
   };
 
-  res.staus(500).json(errObject);
+  res.status(500).json(errObject);
 };
 
