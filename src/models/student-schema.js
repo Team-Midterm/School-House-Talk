@@ -6,24 +6,24 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // name: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // grade: {
-    //   type: DataTypes.INTEGER,
-    //   // values: [9, 10, 11, 12],
-    //   allowNull: false,
-    // },
-    // eligibility: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    // },
-    // sport: {
-    //   type: DataTypes.ENUM,
-    //   values: ['Football', 'Baseball', 'Basketball', 'Soccer'],
-    //   allowNull: true,
-    // },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    grade: {
+      type: DataTypes.INTEGER,
+      // values: [9, 10, 11, 12],
+      allowNull: false,
+    },
+    eligibility: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    sport: {
+      type: DataTypes.ENUM,
+      values: ['Football', 'Baseball', 'Basketball', 'Soccer'],
+      allowNull: true,
+    },
   });
 };
 
