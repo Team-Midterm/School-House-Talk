@@ -30,5 +30,5 @@ module.exports = {
   sequelize,
   student: new ModelInterface(studentMod),
   sport: new ModelInterface(sportMod),
-  user: usersModel(sequelize, DataTypes),
+  users: usersModel(sequelize, DataTypes),
 };
