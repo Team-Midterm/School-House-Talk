@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    name: {
+    studentName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -19,11 +19,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    sport: {
+    studentSport: {
       type: DataTypes.ENUM,
       values: ['Football', 'Baseball', 'Basketball', 'Soccer'],
       allowNull: true,
     },
   });
 };
-
