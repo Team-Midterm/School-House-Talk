@@ -7,7 +7,7 @@ const bearer = require('../../src/auth/bearer');
 const jwt = require('jsonwebtoken');
 
 
-
+// user test
 let testUser = {
   admin: {username: 'test-admin', password: 'pass'},
 };
