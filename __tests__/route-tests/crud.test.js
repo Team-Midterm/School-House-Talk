@@ -21,10 +21,10 @@ const sportExample1 = {
 
 const studentExample1 = {
   studentID: '001',
-  name: 'Test Student Name',
+  studentName: 'Test Student Name',
   grade: 10,
   eligibility: true,
-  sport: 'Football',
+  studentSport: 'Football',
 };
 
 beforeAll(async () => {
