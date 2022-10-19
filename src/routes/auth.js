@@ -25,6 +25,7 @@ authRouter.post('/signin', basicAuth, (req, res, next) => {
     user: req.user,
     token: req.user.token,
   };
+
   res.status(200).json(users);
 });
 
