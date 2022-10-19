@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const { Socket } = require('socket.io-client');
 const sportRouter = express.Router();
 const {sport} = require('../models');
 
