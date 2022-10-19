@@ -35,7 +35,7 @@ afterAll(async () => {
   await sequelize.drop();
   await sequelize.close();
 });
-
+// mocking test
 describe('CRUD Tests', () => {
   test('Read failures', () => {
     console.log('-----SPORT READ-----', sport.read());

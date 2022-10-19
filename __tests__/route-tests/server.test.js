@@ -15,7 +15,7 @@ afterAll(async () => {
 });
 
 describe('Server Routes', () => {
-
+//mocking route
   test('handles invalid route', async () => {
     const response = await request.get('/invalidRoute');
     expect(response.status).toBe(404);

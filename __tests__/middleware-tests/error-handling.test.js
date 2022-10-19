@@ -13,7 +13,7 @@ beforeAll(async () => {
 afterAll(async () => {
   await sequelize.sync();
 });
-
+// mocking routes
 describe('Server Routes', () => {
 
   it('handles errors', async () => {
