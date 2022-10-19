@@ -1,13 +1,11 @@
 'use strict';
 
-module.exports = function (err, req, res, next) {
-  const error = err.message ? err.message : err;
-
-  const errObject = {
-    status: 500,
-    message: `SERVER ERROR: ${error}`,
-  };
-
-  res.status(500).json(errObject);
+module.exports = (error, req, res, next) => {
+  res.status(500).send({
+    error: 500,
+    route: req.path,
+    query: req.query,
+    body: req.body,
+    message: typeof(error) === 'string' ? error : `SERVER ERROR: ${error.message}`,
+  });
 };
-

@@ -19,6 +19,9 @@ app.get ('/', (req, res, next) => {
   res.status(200).send('Welcome to the School-House-Talk server.');
 });
 
+app.get('/bad', (req, res, next) => {
+  next('this is a bad route');
+});
 
 app.use('*', notFound);
 app.use(errorHandler);

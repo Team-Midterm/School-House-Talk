@@ -10,7 +10,7 @@ module.exports = (capability => {
         next();
       }
       else {
-        next('You dont have access!');
+        next('You don\'t have access!');
       }
 
     } catch (error) {

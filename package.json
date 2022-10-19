@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Team-Midterm/MK-Naomi#readme",
   "dependencies": {
+    "acl": "^0.4.11",
     "base-64": "^1.0.0",
     "bcrypt": "^5.1.0",
     "chance": "^1.1.8",
