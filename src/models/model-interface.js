@@ -21,7 +21,7 @@ class ModelInterface {
 
   async create(record) {
     try {
-      console.log('are we here?', record);
+      // console.log('are we here?', record);
       return await this.model.create(record);
     } catch (e) {
       console.error('Error in ModelInterface.prototype.create:', e.message);
