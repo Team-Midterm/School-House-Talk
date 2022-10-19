@@ -1,8 +1,6 @@
-## Mid Term Project
+## School House Talk
 
-### Project: Project Name Here
-
-### Author:
+### Authors:
 
 - Isaiah Keller
 - Luis Rosales
@@ -12,12 +10,14 @@
 
 ### Problem Domain
 
-Concise Description of why this app exists
+School House Talk will act as a single source of truth for communication and information about school activities and events as well as a messaging app between faculty and parents
 
 ### Links and Resources
 
 - [Project Deck](https://docs.google.com/presentation/d/1sjMvWgOLFNzgRsVHPoguDWuKrk0tR04XeYjH9Z0Gr2k/edit#slide=id.g2accd1c413_3_31)
-- [Trello]()
+- [Trello](https://trello.com/w/cf401team)
+- [UML](needed)
+- [Software Requirements](/requirements.md)
 
 - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
@@ -25,34 +25,35 @@ Concise Description of why this app exists
 
 ### Setup
 
-#### `.env` requirements (where applicable)
+### `.env` requirements (where applicable)
 
 i.e.
 
 - `PORT` - Port Number
 - `DATABASE_URL` - URL to the running Postgres instance/db
 
-#### How to initialize/run your application (where applicable)
+### How to initialize/run your application (where applicable)
 
 - e.g. `npm start`
 
-#### How to use your library (where applicable)
+### How to use your library (where applicable)
 
-#### Features / Routes
+### Features
 
-- Feature One: Details of feature
-- GET : `/hello` - specific route to hit
+#### MVP
 
-#### Tests
+|  Feature  |  Completion Level  |  Time Expected  |  Time Taken  |  Developer  |
+| :---------------------- | :-----------: | :-------: | :-------: | :-------------|
+|
+
+### UML
+
+![MVP UML](./assets/Midterm%20MVP%20UML.png)
+
+### Tests
 
 - How do you run tests?
 - Any tests of note?
 - Describe any tests that you did not complete, skipped, etc
 
-#### UML
-
-Link to an image of the UML for your application and response to events
-
-#### References
-
-
+### References
