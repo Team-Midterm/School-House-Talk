@@ -1,11 +1,13 @@
 {
-  "name": "School-House-Talk",
+  "name": "school-house-talk",
   "version": "1.0.0",
   "description": "### Project: Project Name Here",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node index.js",
     "socket": "NODE_ENV=production node src/sockets/index.js",
+    "user": "NODE_ENV=production node src/sockets/user.js",
+    "inq": "NODE_ENV=production node inq.js",
     "dev": "NODE_ENV=development nodemon index.js",
     "test": "NODE_ENV=test jest --verbose --coverage",
     "test-watch": "NODE_ENV=test jest --watchAll --verbose --coverage",
