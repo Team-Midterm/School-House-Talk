@@ -10,41 +10,50 @@
 
 ### Problem Domain
 
-School House Talk will act as a single source of truth for communication and information about school activities and events as well as a messaging app between faculty and parents
+School House Talk will act as a single source of truth for communication and information about school activities and events between faculty and parents.
+
+### Libraries, Packages, & System Requirements : AuthO, Node.JS, Axios, Base-64, BCrypt, Chance, Express, Heroku, Inquirer, Postgres, Sequelize, Jest, Socket.io, Socket.io-client, Supertest
 
 ### Links and Resources
 
 - [Project Deck](https://docs.google.com/presentation/d/1sjMvWgOLFNzgRsVHPoguDWuKrk0tR04XeYjH9Z0Gr2k/edit#slide=id.g2accd1c413_3_31)
 - [Trello](https://trello.com/w/cf401team)
-- [UML](needed)
 - [Software Requirements](/requirements.md)
-
-- [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
+- [ci/cd](https://github.com/Team-Midterm/School-House-Talk/actions) (GitHub Actions)
+- [back-end server url](https://school-house-talk.herokuapp.com/)
 
 ### Setup
 
-### `.env` requirements (where applicable)
+Clone down back-end from GitHub repository, Npm i, Npm start, Add an .env to the .gitIgnore with the user's access keys to the server and any needed library access keys.
 
 i.e.
 
 - `PORT` - Port Number
-- `DATABASE_URL` - URL to the running Postgres instance/db
+- `DATABASE_URL` - postgres://iswraxdqfirlkz:5a589debab9fa279c8d43d5ae923fac1f9d12782292e10a42ad405532957bfe6@ec2-52-3-200-138.compute-1.amazonaws.com:5432/d954q9p4g621aj
 
 ### How to initialize/run your application (where applicable)
 
-- e.g. `npm start`
+- npm i
+- npm start
+- start server
+- start postgres in another terminal
+- start seq
 
 ### How to use your library (where applicable)
 
 ### Features
 
+*An admin can create events which will send event announcements to the specific sport
+*A coach can update information for all events which will send event announcements to the specific sport
+*Students/parents will be able to view updates to rooms they are subscribed to
+*Teachers will receive all announcements and updates
+
 #### MVP
 
-|  Feature  |  Completion Level  |  Time Expected  |  Time Taken  |  Developer  |
-| :---------------------- | :-----------: | :-------: | :-------: | :-------------|
-|
+*App will allow coaches and admin to send event information via sms/email.
+*Users (students/teachers/parents) will subscribe to a specific event(sport) and will receive event information and real-time updates.
+*Admin/Coaches will have proper authorization to make changes to data tables that contain event information and users.
+
 
 ### UML
 
@@ -52,8 +61,10 @@ i.e.
 
 ### Tests
 
-- How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
+- How do you run tests? 
 
-### References
+NPM test
+
+- Any tests of note?
+
+- Describe any tests that you did not complete, skipped, etc
