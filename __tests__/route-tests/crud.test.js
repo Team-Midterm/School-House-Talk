@@ -4,6 +4,9 @@ const supertest = require('supertest');
 const { app } = require('../../src/server');
 const mockRequest = supertest(app);
 const { sequelize, student, sport } = require('../../src/models/index');
+const ModelInterface = require('../../src/models/model-interface');
+
+
 
 const newUser1 = {
   username: 'testUser',
@@ -12,6 +15,7 @@ const newUser1 = {
 };
 
 const sportExample1 = {
+  ID: 1,
   sport: 'Football',
   date: '01/01/2022',
   time: 'test time',
@@ -20,12 +24,14 @@ const sportExample1 = {
 };
 
 const studentExample1 = {
+  ID: 1,
   studentID: '001',
   studentName: 'Test Student Name',
   grade: 10,
   eligibility: true,
   studentSport: 'Football',
 };
+
 
 beforeAll(async () => {
   await sequelize.sync();
@@ -49,8 +55,14 @@ describe('CRUD Tests', () => {
   test('Create Sport', () => {
     sport.create(sportExample1);
   });
-
-
+  test('Delete Sport', () =>{
+    sport.delete(sportExample1.ID);
+  });
+  test('Delete Student', () =>{
+    student.delete(studentExample1.ID);
+  });
+  
+  
 });
 
 
