@@ -1,8 +1,12 @@
 'use strict';
+require('dotenv').config();
 const inquirer = require ('inquirer');
 const axios = require ('axios');
-const socketEmit = require('./src/sockets/eventEmitter');
+const socketEmit = require('./sockets/eventEmitter');
+// const SOCKETPORT = require('./sockets');
 const PORT = process.env.PORT || 3002;
+// const bearer = require('./auth/bearer');
+
 
 const questionDecide = [
   {
@@ -100,9 +104,9 @@ const reAskQ = () => {
           .then(async (ans) => {
             let tempID = ans.id;
             delete ans.id;
-            axios.put(`http://localhost:${PORT}/sport/${tempID}`, ans);
-            let passData = await axios.get(`http://localhost:3001/sport/${tempID}`);
-            socketEmit('Update', passData.data);
+            await axios.put(`http://localhost:${PORT}/sport/${tempID}`, ans);
+            // let passData = await axios.get(`http://localhost:${PORT}/sport/${tempID}`);
+            // socketEmit('Update', passData.data);
             reAskQ();
           });
         return;
@@ -111,7 +115,7 @@ const reAskQ = () => {
           .then(async (ans) => {
             let tempID = ans.id;
             let passData = await axios.get(`http://localhost:${PORT}/sport/${tempID}`);
-            await axios.delete(`http://localhost:3001/sport/${tempID}`);
+            await axios.delete(`http://localhost:${PORT}/sport/${tempID}`);
             socketEmit('Event Cancel', passData.data);
             reAskQ();
           });
@@ -119,11 +123,45 @@ const reAskQ = () => {
         inquirer.prompt(questionCreate)
           .then(async (ans) => {
             await axios.post(`http://localhost:${PORT}/sport/`, ans);
-            socketEmit('New Event', ans);
+            // socketEmit('New Event', ans);
             reAskQ();
           });
       }
     });
 };
+
+// const reAskQ = () => {
+//   inquirer.prompt(questionDecide)
+//     .then((ans2) => {
+//       if (ans2.decision === 'Modify an event already scheduled.') {
+//         inquirer.prompt(questionModify)
+//           .then(async (ans) => {
+//             let tempID = ans.id;
+//             delete ans.id;
+//             axios.put(`${doURL}/sport/${tempID}`, ans);
+//             let passData = await axios.get(`${doURL}/sport/${tempID}`);
+//             socketEmit('Update', passData.data);
+//             reAskQ();
+//           });
+//         return;
+//       } else if (ans2.decision === 'Delete a sporting event.') {
+//         inquirer.prompt(questionDelete)
+//           .then(async (ans) => {
+//             let tempID = ans.id;
+//             let passData = await axios.get(`${doURL}/sport/${tempID}`);
+//             await axios.delete(`${doURL}/sport/${tempID}`);
+//             socketEmit('Event Cancel', passData.data);
+//             reAskQ();
+//           });
+//       } else if (ans2.decision === 'Create entirely new sporting Event.' ) {
+//         inquirer.prompt(questionCreate)
+//           .then(async (ans) => {
+//             await axios.post(`${doURL}/sport/`, ans);
+//             socketEmit('New Event', ans);
+//             reAskQ();
+//           });
+//       }
+//     });
+// };
 
 reAskQ();

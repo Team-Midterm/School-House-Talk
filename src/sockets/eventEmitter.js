@@ -6,13 +6,13 @@ const socket = io('http://localhost:3004/messages');
 
 
 function socketEmit(eventStr, eventData) {
-  console.log('SocketEmit function call');
+  // console.log('SocketEmit function call');
   const payload = { 
     eventStr: eventStr,
     eventData: eventData,
   };
   socket.emit('GAME-ALERT', payload);
-  console.log('WE GOT eventData', eventData);
+  // console.log('WE GOT eventData', eventData);
 }
 
 module.exports = socketEmit;
