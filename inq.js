@@ -2,8 +2,20 @@
 const inquirer = require ('inquirer');
 const axios = require ('axios');
 const socketEmit = require('./src/sockets/eventEmitter');
+const PORT = process.env.PORT || 3002;
 
-const questions1 = [
+const questionDecide = [
+  {
+    type: 'list',
+    name: 'decision',
+    message: 'What would you like to do Coach?',
+    choices: ['Create entirely new sporting Event.',
+      'Modify an event already scheduled.',
+      'Delete a sporting event.'],
+  },
+];
+
+const questionModify = [
   {
     type: 'input',
     name: 'id',
@@ -40,44 +52,78 @@ const questions1 = [
   },
 ];
 
-// const questions2 = [
-//   {
-//     type: 'input',
-//     name: 'check',
-//     message: 'Need to reschedule a game?',
-//   },
-// ];
+const questionDelete = [
+  {
+    type: 'input',
+    name: 'id',
+    message: 'What is the Sporting Event ID#?',
+  },
+];
 
-inquirer.prompt(questions1)
-  .then(async (ans) => {
-    let tempID = ans.id;
-    delete ans.id;
-    // console.log(JSON.stringify(ans, null, ' '));
-    axios.put(`http://localhost:3001/sport/${tempID}`, ans);
+const questionCreate = [
+  {
+    type: 'list',
+    name: 'sport',
+    message: 'What sport is the new event for?',
+    choices: ['Football',
+      'Baseball',
+      'Basketball',
+      'Soccer'],
+  },
+  {
+    type: 'input',
+    name: 'date',
+    message: 'Input a date. (ex. "11-01-22")',
+  },
+  {
+    type: 'input',
+    name: 'time',
+    message: 'What time is the game?',
+  },
+  {
+    type: 'input',
+    name: 'opponent',
+    message: 'Name of opposing team?',
+  },
+  {
+    type: 'input',
+    name: 'location',
+    message: 'Game location? (enter school name)',
+  },
+];
 
-    let passData = await axios.get(`http://localhost:3001/sport/${tempID}`);
+const reAskQ = () => {
+  inquirer.prompt(questionDecide)
+    .then((ans2) => {
+      if (ans2.decision === 'Modify an event already scheduled.') {
+        inquirer.prompt(questionModify)
+          .then(async (ans) => {
+            let tempID = ans.id;
+            delete ans.id;
+            axios.put(`http://localhost:${PORT}/sport/${tempID}`, ans);
+            let passData = await axios.get(`http://localhost:3001/sport/${tempID}`);
+            socketEmit('Update', passData.data);
+            reAskQ();
+          });
+        return;
+      } else if (ans2.decision === 'Delete a sporting event.') {
+        inquirer.prompt(questionDelete)
+          .then(async (ans) => {
+            let tempID = ans.id;
+            let passData = await axios.get(`http://localhost:${PORT}/sport/${tempID}`);
+            await axios.delete(`http://localhost:3001/sport/${tempID}`);
+            socketEmit('Event Cancel', passData.data);
+            reAskQ();
+          });
+      } else if (ans2.decision === 'Create entirely new sporting Event.' ) {
+        inquirer.prompt(questionCreate)
+          .then(async (ans) => {
+            await axios.post(`http://localhost:${PORT}/sport/`, ans);
+            socketEmit('New Event', ans);
+            reAskQ();
+          });
+      }
+    });
+};
 
-    console.log('my info to pass', passData.data);
-    socketEmit('Update', passData.data);
-    return;
-  });
-
-
-// inquirer.prompt(questions2)
-//   .then((ans2) => {
-//     console.log('checking obj in 2', ans2);
-
-//     inquirer.prompt(questions1)
-//       .then(async (ans) => {
-//         let tempID = ans.id;
-//         delete ans.id;
-//         console.log('check the id', tempID);
-//         console.log(JSON.stringify(ans, null, ' '));
-//         // axios.put(`http://localhost:3001/sport/${tempID}`, ans);
-//         console.log('check the ans', ans);
-//         // let passData = await axios.get(`http://localhost:3001/sport/${tempID}`);
-        
-//         // console.log('my info to pass', passData.data);
-//         // socket.emit('GAME-ALERT', passData.data);
-//       });
-//   });
+reAskQ();
