@@ -17,7 +17,7 @@ console.log('Listening SOCKET PORT', SOCKETPORT);
 messages.on('connection', (socket) => {
   console.log('SOCKET CONNECTED', socket.id);
   socket.onAny((event, payload) => {
-    const date = new Date();
+    const date = new Date();      // date here? passed in info, check
     const time = date.toTimeString();
     console.log('EVENT', {event, time, payload});
   });
