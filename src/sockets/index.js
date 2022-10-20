@@ -22,7 +22,7 @@ messages.on('connection', (socket) => {
     console.log('EVENT', {event, time, payload});
   });
   socket.on('GAME-ALERT', (payload) => {
-    console.log('PROOF OF LIFE', payload);
+    console.log('--------------------------');
     const sportName = payload.eventData.sport;
     const eventMessage = `${payload.eventStr} \nSport Event: ${payload.eventData.sport} \nDate: ${payload.eventData.date} \nTime: ${payload.eventData.time} \nAgainst: ${payload.eventData.opponent} \nAddress: ${payload.eventData.location}`;
     socket.to(sportName).emit('event', eventMessage);
