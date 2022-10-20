@@ -12,7 +12,7 @@ What pain point does this project solve?
 
 Why should we care about your product?
 
-* Provides real-time updates reguarding school events and changes
+* Provides real-time updates regarding school events and changes
 
 ## Scope
 
@@ -40,9 +40,9 @@ What will your MVP functionality be?
 
 What are your stretch goals?
 
-* add mmultiple events and sports
+* add multiple events and sports
 * allow a chat functionality for parents
-* allow admin/teachers to determine student eligibilty with the app
+* allow admin/teachers to determine student eligibility with the app
 
 ## Functional Requirements
 
@@ -62,9 +62,9 @@ Non-functional requirements are requirements that are not directly related to th
 * testability:
   * tests will be run to verify coaches/Admin can create, read, update, and delete items from database
   * test will be run to verify that students/teachers/parents will NOT be able to create, read, update, and delete items from database
-  * test will be run to verify messeges are being sent/received to event rooms when information in the database is updated
+  * test will be run to verify messages are being sent/received to event rooms when information in the database is updated
 
 * Security:
-  * tests to verify functionality of autorization to verify coaches and Admin can access the database
+  * tests to verify functionality of authorization to verify coaches and Admin can access the database
   * test will be run to verify students/teachers/parents will not have access the database
   * test students/parents are subscribes to the correct room by verifying the sport indicated
