@@ -23,6 +23,14 @@ messages.on('connection', (socket) => {
   });
   socket.on('GAME-ALERT', (payload) => {
     console.log('PROOF OF LIFE', payload);
+    const sportName = payload.eventData.sport;
+    const eventMessage = `${payload.eventStr} \nSport Event: ${payload.eventData.sport} \nDate: ${payload.eventData.date} \nTime: ${payload.eventData.time} \nAgainst: ${payload.eventData.opponent} \nAddress: ${payload.eventData.location}`;
+    socket.to(sportName).emit('event', eventMessage);
+  });
+
+  socket.on('JOIN', (room) => {
+    console.log(`You've joined the ${room} room`);
+    socket.join(room);
   });
 
   // socket.broadcast.emit('')
