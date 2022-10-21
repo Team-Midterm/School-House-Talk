@@ -5,6 +5,8 @@ const middleware = require('../../src/auth/basic');
 const { sequelize, users } = require('../../src/models');
 const bearer = require('../../src/auth/bearer');
 const jwt = require('jsonwebtoken');
+const SECRET = process.env.SECRET || 'secret';
+
 
 
 // user test
