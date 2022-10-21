@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production node index.js",
     "socket": "NODE_ENV=production node src/sockets/index.js",
     "user": "NODE_ENV=production node src/sockets/user.js",
-    "inq": "NODE_ENV=production node src/coachQ.js",
+    "coach": "NODE_ENV=production node src/coachQ.js",
     "dev": "NODE_ENV=development nodemon index.js",
     "test": "NODE_ENV=test jest --verbose --coverage",
     "test-watch": "NODE_ENV=test jest --watchAll --verbose --coverage",
@@ -15,7 +15,7 @@
     "db:config": "NODE_ENV=development sequelize init:config",
     "db:create": "sequelize db:create",
     "db:drop": "sequelize db:drop",
-    "db:seed": "node admin/seed.js"
+    "seed": "node admin/seed.js"
   },
   "repository": {
     "type": "git",
