@@ -22,27 +22,27 @@ let sportList = [
   },{
     sport: 'Baseball',
     date: '10-19-22',
-    time: '08:00',
+    time: '03:00',
     opponent: 'Angels',
     location: 'Goose Creek, SC',
   },{
     sport: 'Basketball',
     date: '10-22-22',
-    time: '8:00',
+    time: '08:00',
     opponent: 'City High Little Hawks',
     location: 'Cedar Rapids, IA',
   },{
     sport: 'Basketball',
     date: '11-22-22',
-    time: '7:30',
+    time: '07:30',
     opponent: 'Liberty Lightening',
     location: 'North Liberty, IA',
   },{
     sport: 'Soccer',
-    date: '08-30-22',
-    time: '01:00',
+    date: '10-30-22',
+    time: '13:00',
     opponent: 'Manteca Rangers',
-    location: 'Monmmoth, Il',
+    location: 'Mammoth, Il',
   },{
     sport: 'Soccer',
     date: '10-06-22',
