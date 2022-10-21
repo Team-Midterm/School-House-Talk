@@ -2,11 +2,11 @@
 const express = require('express');
 const sportRouter = express.Router();
 const { sport } = require('../models');
-const bearer = require ('../auth/bearer');
+// const bearer = require ('../auth/bearer');
 
 const socketEmit = require('../sockets/eventEmitter');
 
-sportRouter.get('/sport', bearer, async (req, res, next) => {
+sportRouter.get('/sport', async (req, res, next) => {
   let allSports = await sport.read();
   res.status(200).json(allSports);
 });

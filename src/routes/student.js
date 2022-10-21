@@ -3,7 +3,7 @@
 const express = require('express');
 const studentRouter = express.Router();
 const {student} = require('../models');
-const bearer = require('../auth/bearer');
+// const bearer = require('../auth/bearer');
 
 studentRouter.get('/student', async (req, res, next) => {
   let allStudents = await student.read();
