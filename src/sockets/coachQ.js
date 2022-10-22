@@ -3,9 +3,10 @@
 require('dotenv').config();
 const inquirer = require ('inquirer');
 const axios = require ('axios');
-const socketEmit = require('./sockets/eventEmitter');
-const PORT = process.env.PORT || 3002;
+const socketEmit = require('./eventEmitter');
 // const bearer = require('./auth/bearer');
+
+const PORT = process.env.PORT || 3002;
 
 const questionDecide = [
   {

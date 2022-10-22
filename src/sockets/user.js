@@ -17,6 +17,7 @@ const joinRoom = () => {
     let index = roomChoices.indexOf(room);
     roomChoices.splice(index, 1);
     socket.emit('JOIN', room);
+    console.log(`You have joined the ${room} room.`)
     if(roomChoices.length === 0){
       console.log('No more rooms to join at this time.');
       return;

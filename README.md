@@ -16,30 +16,48 @@ School House Talk will act as a single source of truth for communication and inf
 
 ### Links and Resources
 
-- [Project Deck](https://docs.google.com/presentation/d/1sjMvWgOLFNzgRsVHPoguDWuKrk0tR04XeYjH9Z0Gr2k/edit#slide=id.g2accd1c413_3_31)
-- [Trello](https://trello.com/w/cf401team)
+- [Project Presentation Slides](https://docs.google.com/presentation/d/1sjMvWgOLFNzgRsVHPoguDWuKrk0tR04XeYjH9Z0Gr2k/edit#slide=id.g2accd1c413_3_31)
 - [Software Requirements](/requirements.md)
-- [ci/cd](https://github.com/Team-Midterm/School-House-Talk/actions) (GitHub Actions)
-- [back-end server url](https://school-house-talk.herokuapp.com/)
+- [Github](https://github.com/ijkeller/School-House-Talk)
 
 ### Setup
 
-Clone down back-end from GitHub repository, Npm i, Npm start, Add an .env to the .gitIgnore with the user's access keys to the server and any needed library access keys.
-
-i.e.
-
-- `PORT` - Port Number
-- `DATABASE_URL` - postgres://iswraxdqfirlkz:5a589debab9fa279c8d43d5ae923fac1f9d12782292e10a42ad405532957bfe6@ec2-52-3-200-138.compute-1.amazonaws.com:5432/d954q9p4g621aj
+- clone from GitHub repository
+- in your terminal move to the root directory
+- type **npm i** in the terminal
+- add a .env with the example keys provided in .env.sample
+  - most of the .env requirements have a default value set so it should run without adding any variables to your .env
+- if needed, start your postgres 
+- type **npn run db:config** in your terminal
+- open your config/config.json file
+- adjust the values in the development object to your local postgres username, fill in the password if required, enter a new database name, enter 'postgres' as your dialect
+  - Example:
+```js
+    "development": {
+        "username": "<your username>",  // enter your username
+        "password": null,               // enter your password if required
+        "database": "schoolhouse-talk", // new database name
+        "host": "127.0.0.1",            // indicates you will be communicating with the localhost
+        "dialect": "postgres"           // postgres is the dialect currently being used
+      },
+```
+- type **npm run db:create** in your terminal
+- type **npm run seed** in your terminal
 
 ### How to initialize/run your application (where applicable)
 
-- npm i
 - open 5 separate terminals
-- npm run start in one terminal
+- **npm run start** in one terminal
 - start postgres in another terminal
-- npm run socket in another terminal
-- npm run user in another terminal
-- npm run coach in the last terminal
+- **npm run socket** in another terminal
+  - this will show the socket server activity and anything passed through it
+- **npm run user** in another terminal
+  - choose rooms to listen to
+    - pick as many rooms as you like, there are currently four options
+  - start as many user terminals as you like
+- **npm run coach** in the last terminal
+  - choose actions for the coach to take
+    - create, modify, or delete an event
 
 ### Features
 
@@ -61,10 +79,6 @@ i.e.
 
 ### Tests
 
-- How do you run tests? 
+To run tests enter **npm run test** in the root directory.
 
-NPM test
 
-- Any tests of note?
-
-- Describe any tests that you did not complete, skipped, etc

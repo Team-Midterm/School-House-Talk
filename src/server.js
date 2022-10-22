@@ -1,13 +1,16 @@
 'use strict';
 
 const express = require ('express');
-const authRouter = require('./routes/auth');
-const PORT = process.env.PORT || 3002;
 const app = express();
-const studentRouter = require('./routes/student');
-const sportRouter = require('./routes/sport');
+
 const notFound = require('./middleware/404');
 const errorHandler = require('./middleware/500');
+
+const authRouter = require('./routes/auth');
+const studentRouter = require('./routes/student');
+const sportRouter = require('./routes/sport');
+
+const PORT = process.env.PORT || 3002;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));

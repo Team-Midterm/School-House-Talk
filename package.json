@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production node index.js",
     "socket": "NODE_ENV=production node src/sockets/index.js",
     "user": "NODE_ENV=production node src/sockets/user.js",
-    "coach": "NODE_ENV=production node src/coachQ.js",
+    "coach": "NODE_ENV=production node src/sockets/coachQ.js",
     "dev": "NODE_ENV=development nodemon index.js",
     "test": "NODE_ENV=test jest --verbose --coverage",
     "test-watch": "NODE_ENV=test jest --watchAll --verbose --coverage",
