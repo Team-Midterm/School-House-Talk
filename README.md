@@ -34,12 +34,12 @@ i.e.
 ### How to initialize/run your application (where applicable)
 
 - npm i
-- npm start
-- start server
+- open 5 separate terminals
+- npm run start in one terminal
 - start postgres in another terminal
-- start seq
-
-### How to use your library (where applicable)
+- npm run socket in another terminal
+- npm run user in another terminal
+- npm run coach in the last terminal
 
 ### Features
 
